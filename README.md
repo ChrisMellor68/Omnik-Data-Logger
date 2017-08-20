@@ -8,6 +8,15 @@ script is run the data from the inverter will be send to the database. And with
 a five minute interval the data will also be uploaded to PVoutput.org as a live
 status.
 
+
+##UPDATED...
+A clone was made of the original work of Wouterr, which needed updating to accomodate the
+built in mysql libs of Python 2.7 etc. This was done (probably very poorly) but now it works
+with th enewer libs.
+
+
+
+
 ## Supported inverters
 Users reported that this script works for wifi kits with a s/n starting with
 602xxxxxx to 606xxxxxx. With wifi kits in the range 601xxxxxx it is not
@@ -23,7 +32,7 @@ Omnikol-PV-Logger by t3kpunk (https://github.com/t3kpunk/Omniksol-PV-Logger).
 * Install Python
 * Git clone the source with `git clone https://github.com/Woutrrr/Omnik-Data-Logger.git`
 * Copy the config-org.cfg to config.cfg
-* Change the settings in config.cfg
+* Change the settings in config.cfg - don't forget to set the output section in the cfg
 * Test your settings with `python LiveStats.py`, when successful you should see
 data from your inverter
 * Run the script with `python OmnikExport.py` or better set a scheduled task or 
@@ -38,6 +47,11 @@ With these options this will execute the script every minute.
 Yes you can edit config-org.cfg directly. However if you want to update the 
 script your settings will be overwritten with the default values. By creating 
 config.cfg, you can preserve your settings when upgrading.
+
+Added: Also - if you clone something and then git push, becuase you DIDN'T
+add the config.cfg to the repository then you don't accidentally pulish
+your cherished database passwords.
+
 
 ## Development
 To help with development when no sun is present a small simulator script can be
